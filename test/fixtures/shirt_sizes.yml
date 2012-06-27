@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  shirt_id: 1
+  gender: MyString
+  size: MyString
+
+two:
+  shirt_id: 1
+  gender: MyString
+  size: MyString
