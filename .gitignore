@@ -32,3 +32,5 @@ pickle-email-*.html
 /log/*.log
 /tmp
 >>>>>>> initial
+
+.idea
