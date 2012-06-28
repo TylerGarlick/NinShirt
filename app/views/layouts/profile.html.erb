@@ -1,33 +1,38 @@
 <% content_for :sub_content do %>
   <div class="row">
     <div class="span2">
-      <ul class="nav nav-list">
-        <li id="dashboard-list-item">
-          <a href="<%= dashboard_url %>">
-            <i class="icon-home"></i>
-            Dashboard
-          </a>
-        </li>
+      <div class="well">
+        <ul class="nav nav-list">
+          <li class="nav-header">
+            List header
+          </li>
+          <li id="dashboard-list-item">
+            <a href="<%= dashboard_url %>">
+              <i class="icon-home"></i>
+              Dashboard
+            </a>
+          </li>
 
-        <li id="profile-list-item">
-          <a href="<%= profile_url %>">
-            <i class="icon-user"></i>
-            Profile
-          </a>
-        </li>
-        <li id="shops-list-item">
-          <a href="<%= profile_url %>">
-            <i class="icon-th-large"></i>
-            Shops
-          </a>
-        </li>
-        <li id="orders-list-item">
-          <a href="<%= profile_url %>">
-            <i class="icon-inbox"></i>
-            Orders
-          </a>
-        </li>
-      </ul>
+          <li id="profile-list-item">
+            <a href="<%= profile_url %>">
+              <i class="icon-user"></i>
+              Profile
+            </a>
+          </li>
+          <li id="shops-list-item">
+            <a href="<%= profile_url %>">
+              <i class="icon-th-large"></i>
+              Shops
+            </a>
+          </li>
+          <li id="orders-list-item">
+            <a href="<%= profile_url %>">
+              <i class="icon-inbox"></i>
+              Orders
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="span10"><%= yield %></div>
   </div>

@@ -4,6 +4,9 @@ Ninshirt::Application.routes.draw do
 
   root :to => 'pages#index'
   resources :shops do
+    resources :shirts
+
+
     collection do
       get 'not_found'
     end

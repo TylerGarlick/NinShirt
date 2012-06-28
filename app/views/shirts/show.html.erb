@@ -1,0 +1,96 @@
+<div class="row">
+  <div class="span12">
+    <ul class="breadcrumb">
+      <li>
+        <%= link_to "Home", root_url %> <span class="divider">/</span>
+      </li>
+      <li>
+        <%= link_to "Shops", shops_url %> <span class="divider">/</span>
+      </li>
+      <li>
+        <%= link_to "#{shop.name}'s Shirts", shop_url(shop.slug) %> <span class="divider">/</span>
+      </li>
+      <li class="active"><%= shirt.name %></li>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="span12">
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="span8">
+    <img src="http://placehold.it/800x600" alt="">
+
+    <div class="row">
+      <div class="span8">
+        <ul class="thumbnails">
+          <li class="span2">
+            <div class="thumbnail">
+              <img src="http://placehold.it/260x180" alt="">
+            </div>
+          </li>
+          <li class="span2">
+            <div class="thumbnail">
+              <img src="http://placehold.it/260x180" alt="">
+            </div>
+          </li>
+          <li class="span2">
+            <div class="thumbnail">
+              <img src="http://placehold.it/260x180" alt="">
+            </div>
+          </li>
+          <li class="span2">
+            <div class="thumbnail">
+              <img src="http://placehold.it/260x180" alt="">
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="span4">
+    <div class="well">
+      <h1><%= shirt.name %></h1>
+      <div class="row">
+        <div class="span4">
+          <blockquote><p><%= shirt.description %></p>
+            <small>By <%= link_to shop.name, shop_url(shop.slug) %></small>
+          </blockquote>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span4">
+          <h4>Men's Sizes</h4>
+
+          <div class="btn-group">
+            <button class="btn">S</button>
+            <button class="btn">M</button>
+            <button class="btn">LG</button>
+            <button class="btn">XL</button>
+            <button class="btn">2X</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="span4">
+          <h4>Women's Sizes</h4>
+
+          <div class="btn-group">
+            <button class="btn">S</button>
+            <button class="btn">M</button>
+            <button class="btn">LG</button>
+            <button class="btn">XL</button>
+            <button class="btn">2X</button>
+          </div>
+        </div>
+      </div>
+      <h2>$24.99</h2>
+    </div>
+  </div>
+</div>
