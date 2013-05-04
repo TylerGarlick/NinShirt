@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  description: MyString
+  price: 1.5
+  wholesale_price: 1.5
+  is_active: false
+  is_approved: false
+
+two:
+  name: MyString
+  description: MyString
+  price: 1.5
+  wholesale_price: 1.5
+  is_active: false
+  is_approved: false

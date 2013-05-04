@@ -1,0 +1,50 @@
+<div class="shirt-detail">
+	<div class="shirt-photo">
+		test photo
+	</div>
+	<div class="shirt-information">
+		<h2><%= shirt.name %></h2>
+		<div class="artist-information">By: NinShirt</div>
+		<div class="description"><%= shirt.description %></div>
+		<div class="price">
+			<%= number_to_currency shirt.price %>
+		</div>
+		<div class="shirt-sizes">
+			<% if shirt.shirt_sizes.where(:gender => 'Mens').length > 0 %>
+			<h5>Men's Sizes</h5>
+			<ul>
+				<% shirt.shirt_sizes.where(:gender => 'Mens').each do |size| %>
+					<li><%= link_to size.size_code,  cart_add_url(:shirt_size => size.id, :quantity => 1), :method => :post %></li>
+				<% end %>
+			</ul>
+			<% end %>
+		</div>
+		<div class="shirt-sizes">
+			<% if shirt.shirt_sizes.where(:gender => 'Womens').length > 0 %>
+			<h5>Womens's Sizes</h5>
+			<ul>
+				<% shirt.shirt_sizes.where(:gender => 'Womens').each do |size| %>
+					<li><%= link_to size.size_code,  cart_add_url(:shirt_size => size.id, :quantity => 1), :method => :post %></li>
+				<% end %>
+			</ul>
+			<% end %>
+		</div>
+
+	</div>
+</div>
+
+<% content_for :head do %>
+	<title>NinShirt, Shirts > <%= shirt.name %></title>
+<% end %>
+
+<% content_for :page_title do %>
+	<h1><%= shirt.name %></h1>
+<% end %>
+
+<% content_for :breadcrumbs do %>
+	<%= link_to 'Home', root_url %> <span>»</span> <%= link_to 'Shirts', shirts_url %> <span>»</span> <%= shirt.name %>
+<% end %>
+
+<% content_for :left_menu do %>
+	<%= render :partial => 'shirts/browse_shirts' %>
+<% end %>

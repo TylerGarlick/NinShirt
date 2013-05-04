@@ -1,0 +1,33 @@
+<h1>Orders</h1>
+
+<table>
+  <tr>
+	  <td>Status</td>
+    <td>Billing First Name</td>
+    <td>Billing Last Name</td>
+	  <td>Shipping First Name</td>
+    <td>Shipping Last Name</td>
+    <td>SubTotal</td>
+    <td>Shipping</td>
+    <td>Tax</td>
+    <td>Total</td>
+	  <td></td>
+  </tr>
+
+	<% orders.each do |order| %>
+    <tr>
+      <td><%= order.order_status.name %></td>
+      <td><%= order.billing_first_name %></td>
+	    <td><%= order.billing_last_name %></td>
+	    <td><%= order.shipping_first_name %></td>
+	    <td><%= order.shipping_last_name %></td>
+      <td><%= number_to_currency(order.subtotal) %></td>
+	    <td><%= number_to_currency(order.shipping) %></td>
+	    <td><%= number_to_currency(order.tax) %></td>
+	    <td><%= number_to_currency(order.total) %></td>
+	    <td>
+	        <%= link_to 'Edit', edit_admin_order_url(order) %>
+	    </td>
+    </tr>
+	<% end %>
+</table>

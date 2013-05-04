@@ -1,0 +1,9 @@
+<% content_for :content do %>
+	<div class="col3 sidebarleft">
+		<%= yield :left_menu %>
+	</div>
+	<div class="col32 hentry">
+		<%= yield %>
+  </div>
+<% end %>
+<%= render :file => 'layouts/application' %>

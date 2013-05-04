@@ -1,0 +1,205 @@
+.flash {
+	padding: 5px 8px;
+  text-align: center;
+	font-size: 13px;
+	font-weight: bold;
+	position:absolute;
+	left: 0;
+	right:0;
+	top: 0;
+	z-index: 10000;
+}
+
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+
+#flash_error, #flash_alert {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+
+.button {
+	border:0px;
+	cursor:pointer
+}
+
+.breadcrumbs {
+	margin-bottom: 15px;
+}
+
+.fields {
+
+}
+
+.fields label {
+	display: block;
+	font-weight:bold;
+	margin: 0px;
+	padding: 0px;
+}
+
+input[type="text"], input[type="password"]{
+	min-width: 300px;
+}
+
+input[type="text"], input[type="password"], textarea {
+	padding: 7px;
+}
+
+.shirts {
+	margin-top: 25px;
+}
+
+.shirt-picture {
+	border: 1px solid black;
+	width: 200px;
+	height: 150px;
+	background:white;
+}
+
+.shirt-detail {
+	margin-top: 25px;
+}
+
+.shirt-detail .artist-information {
+	margin-left: 15px;
+	font-size: 95%;
+	font-style: italic;
+}
+
+.shirt-detail .description {
+	margin-top: 10px;
+	line-height: 200%;
+}
+
+.shirt-detail .price {
+	font-size: 30px;
+	font-weight: bold;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.shirt-detail .shirt-photo {
+	float:left;
+	width: 280px;
+	min-height: 300px;
+	padding: 10px;
+	border: 1px solid black;
+	background: white;
+}
+
+.shirt-detail .shirt-information {
+	float:left;
+	width: 600px;
+	padding:10px;
+	margin-left: 20px;
+}
+
+.shirt-detail h2, .shirt-detail h5 {
+	margin: 0;
+	padding:0;
+}
+
+.shirt-detail .shirt-sizes {
+	clear: both;
+	margin-top: 15px;
+}
+
+.shirt-detail .shirt-sizes ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	clear:both;
+}
+
+.shirt-detail .shirt-sizes ul li {
+	float: left;
+	list-style: none;
+	list-style-image: none;
+	list-style-type: none;
+	border: 1px solid black;
+	color: white;
+	background: #CF0000;
+}
+
+.shirt-detail .shirt-sizes ul li a {
+	display:inline-block;
+	padding: 5px;
+}
+
+.cart {
+	width: 100%;
+}
+
+.cart .product-name {
+	width: 200px;
+}
+
+.cart .price {
+	width: 50px;
+}
+
+.cart .operator {
+	width: 15px;
+}
+
+.cart .quantity {
+	width: 50px;
+}
+
+.cart .footer-label {
+	text-align: right;
+}
+
+.cart th, .cart td {
+	text-align:left;
+}
+
+.cart-checkout-button {
+	float: right;
+	width: 200px;
+	text-align: right;
+}
+
+.cart-update-button {
+	float: left;
+	width: 200px;
+}
+
+.cart input[type=text] {
+	width: 100px;
+	min-width:100px;
+}
+
+.fieldWithErrors {
+  display: inline;
+}
+
+.error_messages {
+  width: 400px;
+  border: 2px solid #CF0000;
+	padding: 0 0 12px;
+	margin-bottom: 20px;
+  background-color: #f0f0f0;
+  font-size: 12px;
+}
+
+.error_messages h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 10px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+.error_messages p {
+  margin: 8px 10px;
+}
+
+.error_messages ul {
+  margin: 0;
+}

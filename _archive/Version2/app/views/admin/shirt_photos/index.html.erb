@@ -1,0 +1,23 @@
+<h1><%= shirt.name %> > Photos</h1>
+<%= link_to 'New', new_admin_shirt_shirt_photo_url(shirt) %>
+
+<table>
+  <tr>
+    <td></td>
+    <td>Gender</td>
+    <td>Ordinal</td>
+    <td>Active</td>
+	  <td>Primary</td>
+    <td></td>
+  </tr>
+  <% shirt_photos.each do |shirt_photo| %>
+    <tr>
+      <td></td>
+      <td><%= shirt_photo.gender %></td>
+	    <td><%= shirt_photo.ordinal %></td>
+	    <td><%= shirt_photo.is_active %></td>
+	    <td><%= shirt_photo.is_primary %></td>
+      <td><%= link_to 'Edit', edit_admin_shirt_shirt_photo_url(shirt, shirt_photo) %></td>
+    </tr>
+	<% end %>
+</table>

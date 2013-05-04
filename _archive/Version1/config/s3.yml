@@ -1,0 +1,14 @@
+development:
+  bucket: ninshirt
+  access_key_id: AKIAIT3A2EOQ3TVZS5PQ
+  secret_access_key: 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
+
+test:
+  bucket: ninshirt
+  access_key_id: AKIAIT3A2EOQ3TVZS5PQ
+  secret_access_key: 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
+  
+production:
+  bucket: ninshirt
+  access_key_id: AKIAIT3A2EOQ3TVZS5PQ
+  secret_access_key: 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

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  shirt_id: 1
+  gender: MyString
+  ordinal: 1
+  is_active: false
+
+two:
+  shirt_id: 1
+  gender: MyString
+  ordinal: 1
+  is_active: false

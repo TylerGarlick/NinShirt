@@ -1,0 +1,21 @@
+<h1><%= shirt.name %> > Sizing</h1>
+<%= link_to 'New', new_admin_shirt_shirt_size_url %>
+<table>
+  <tr>
+    <th>Size</th>
+    <th>Gender</th>
+	  <th>Active</th>
+    <th></th>
+  </tr>
+	<% shirt_sizes.each do |size| %>
+    <tr>
+      <td><%=  size.size %></td>
+	    <td><%=  size.gender %></td>
+	    <td><%=  size.is_active %></td>
+      <td>
+	      <%= link_to 'Edit', edit_admin_shirt_shirt_size_url(shirt, size) %> |
+	      <%= link_to 'Delete', admin_shirt_shirt_size_url(shirt, size), :method => :delete, :confirm => 'Are you sure you want to delete the shirt size?  This is permanent!' %>
+       </td>
+    </tr>
+	<% end %>
+</table>

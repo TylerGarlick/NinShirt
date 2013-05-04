@@ -1,0 +1,17 @@
+.prelaunch {
+	margin: 0 auto;
+	background: white;
+	border: 5px solid black;
+	margin-top: 100px;
+	box-shadow: 2px 2px 5px #595959;
+}
+
+.logo {
+	padding: 10px;
+	background: #252525;
+	border-left: 1px solid black;
+}
+
+.content {
+	padding: 10px;
+}

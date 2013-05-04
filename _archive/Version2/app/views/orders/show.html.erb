@@ -1,0 +1,15 @@
+<h3>Billing Address</h3>
+
+<h3>Shipping Address</h3>
+
+<% content_for :head do %>
+	<title><%= current_user.username %> > Orders</title>
+<% end %>
+
+<% content_for :page_title do %>
+	<h1>Order: <%= order.id %></h1>
+<% end %>
+
+<% content_for :breadcrumbs do %>
+	<%= link_to 'Profile', user_url(current_user) %> <span>»</span> Order: <%= order.id %>
+<% end %>

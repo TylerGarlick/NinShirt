@@ -1,0 +1,401 @@
+/* 	=====================
+*			Global 
+*  	======================
+*/
+
+input[type="text"], textarea, input[type="password"] {
+	padding: 5px;
+	font-size: 17px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.fields, .buttons {
+	padding: 5px;
+}
+.fields label {
+	display: block;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+.buttons {
+	margin-top: 15px;
+}
+
+table {
+	border: 1px solid #cdcdcd;
+	background: white;
+}
+
+table thead tr th {
+	background: #595959;
+	color: white;
+}
+
+.search-tabular-data {
+	text-align: right;
+	background: #cdcdcd;
+	padding: 10px;
+	border: 1px solid #cdcdcd;
+}
+
+.search-tabular-data label {
+	color: black;
+}
+
+.search-tabular-data input {
+	min-width: 200px;
+}
+
+.cart {
+	display: none;
+	position: absolute;
+	z-index: 1000;
+	border: 1px solid black;
+	background: white;
+}
+
+.flash {
+	position: fixed;
+	top: 0;
+	z-index: 1000;
+	padding: 15px;
+	left: 0;
+	right: 0;
+	background: transparent url(../images/black-opacity-75.png) top left;
+	color: white;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.error_messages {
+	border: 2px solid #CE0000;
+	background: #ffbabd;
+	padding: 10px;
+	font-weight:bold;
+	margin: 20px 0px;
+}
+
+.field_with_errors label{
+	color: red;
+}
+
+
+.login-form {
+	float: left;
+}
+.register-for-account {
+	float:right;
+}
+
+/* 	=====================
+*			Top Navigation 
+*  	======================
+*/
+.top-nav {
+	border-top: 2px solid #252525;
+	background: #e6e6e6;
+}
+
+.logo {
+	padding: 10px;
+	padding-left: 0px;
+}
+
+.top-nav-menu {
+	background: #252525;
+	color: white;
+	font-size: 11px;
+	text-align: center;
+}
+.top-nav-menu ul {
+	list-style: none;
+}
+.top-nav-menu ul li {
+	float: left;
+}
+.top-nav-menu ul li a {
+	display: inline-block;
+	padding: 8px 4px;
+	color: white;
+	text-decoration: none;
+	margin: 0px 5px;
+}
+
+.top-nav-menu ul li a:hover {
+	color: #e6e6e6;
+}
+
+.secondary-nav {
+	background: #CE0000;
+	border-top: 1px solid #840101;
+	border-bottom: 1px solid #840101;
+
+}
+
+.secondary-nav a {
+	padding: 10px;
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+
+}
+
+.secondary-nav a:hover {
+	background: #840101;
+}
+
+.breadcrumbs ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.breadcrumbs li {
+	float: left;
+	padding: 5px;
+	margin: 0 5px;
+}
+
+.footer {
+	background: #252525;
+	min-height: 150px;
+	color: white;
+	padding: 25px;
+	margin-top: 50px;
+}
+
+.footer h3 {
+	color: #ffffff;
+}
+
+/* 	=====================
+*			Content 
+*  	======================
+*/
+.main-content {
+	padding-top: 25px;
+	background: white url(../images/page-background.png) top left repeat-x;
+	border-top: 1px solid white;
+
+	min-height: 800px;
+}
+
+.content {
+	clear: both;
+}
+
+.splashscreen {
+	margin-bottom: 25px;
+}
+
+/* Featured Shirt */
+.featured-shirt {
+	margin-bottom: 35px;
+	min-height: 100px;
+}
+
+.featured-shirt .thumbnail {
+	height: 96px;
+	width: 96px;
+	float: left;
+	background: #595959;
+}
+
+.featured-shirt .text {
+	float: left;
+	margin-left: 10px;
+	width: 150px;
+}
+
+.featured-shirt .name {
+	font-weight: bold;
+}
+
+/* 	=====================
+*			Member Styles
+*  	======================
+*/
+.my-shop {
+	border: 1px solid #cdcdcd;
+	background: #e6e6e6;
+	min-height: 170px;
+	margin-bottom: 25px;
+}
+
+.my-shop .title h2 {
+	padding: 5px;
+	background: #595959;
+}
+
+.my-shop .title h2 a {
+	color: white;
+	text-decoration: none;
+}
+
+.my-shop .title h2 a:hover {
+	color: #e6e6e6;
+	text-decoration: none;
+}
+
+.my-shop .big-number {
+	font-size: 60px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 100%;
+}
+
+.my-shop .big-number a {
+	color: black;
+	text-decoration: none;
+}
+
+.my-shop .big-number a:hover {
+	color: #CE0000;
+}
+
+.my-shop .big-number-label {
+	font-size: 18px;
+	text-align: center;
+}
+
+.my-shirt {
+	min-height: 200px;
+	width: 150px;
+	border: 1px solid #cdcdcd;
+	background: white;
+	padding: 10px;
+	float: left;
+}
+
+.shirt-image {
+
+}
+
+.shirt-image .social {
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.show-shirt {
+
+}
+
+.show-shirt .price {
+	margin-top: 15px;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.show-shirt .sizes {
+	clear: both;
+	margin-bottom: 50px;
+}
+.show-shirt .sizes h3 {
+	margin:0px;
+}
+.show-shirt .sizes ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+.show-shirt .sizes ul li {
+
+	margin: 5px;
+	float:left;
+	font-size: 18px;
+	font-weight: bold;
+
+	background: #CE0000;
+	text-align: center;
+
+	border: 1px solid #840101;
+}
+
+.show-shirt .sizes ul li.not-available {
+
+	margin: 5px;
+	float:left;
+	font-size: 18px;
+	font-weight: bold;
+
+	background: transparent;
+	text-align: center;
+
+	width: 25px;
+	height: 25px;
+	padding: 5px;
+
+	color:#cdcdcd;
+}
+
+
+.show-shirt .sizes ul li a {
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	width: 25px;
+	height: 25px;
+	padding: 5px;
+}
+
+.show-shirt .sizes ul li.not-available  {
+	color: #cdcdcd;
+	background: transparent;
+	border: 0;
+}
+
+.show-shirt .sizes ul li:hover.not-available  {
+	color: #cdcdcd;
+	background: transparent;
+	border: 0;
+}
+
+.show-shirt .sizes ul li:hover {
+	background: #595959;
+	border: 1px solid black;
+}
+
+.show-shirt .sizes ul li:hover a {
+	color:white;
+}
+
+.show-shirt .shirt-type {
+	margin-top: 15px;
+	font-weight: bold;
+}
+
+.shirt-gallery {
+	margin-top:25px;
+}
+
+.shirt-gallery ul {
+	list-style: none;
+	margin: 0;
+	padding:0;
+}
+
+.shirt-gallery ul li {
+	float:left;
+	margin: 12px;
+}
+
+.related-shirts {
+	clear: both;
+	margin-top: 75px;
+}
+
+.related-shirts ul {
+	list-style: none;
+	margin: 0;
+	padding:0;
+}
+
+.related-shirts ul li {
+	float:left;
+	margin: 12px;
+}
+

@@ -1,0 +1,63 @@
+<script type="text/javascript">
+	$(function() {
+		$(".sizes ul li a").click(function() {
+			var shirtSizeId = $(this).data('shirt-size-id');
+			$.post('<%= cart_url %>.json', {shirt_size_id: shirtSizeId}, function(data) {
+				alert(data);
+			});
+		});
+	});
+</script>
+
+<div class="span-8">
+  <div class="shirt-image">
+    <%= image_tag @shirt.photo.url %>
+    <div class="social"><%= render :partial => 'shared/social' %></div>
+    <div class="shirt-gallery">
+      <ul>
+        <% 9.times do %>
+          <li><%= image_tag('shirt-gallery-placeholder.png') %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="prepend-1 span-15 last show-shirt">
+  <h1><%= @shirt.name %></h1>
+
+  <div><%= @shirt.description %></div>
+  <div class="shirt-type">Printed on: <a href="#">American Apparel</a> <a href="#">Sizing Guide</a></div>
+  <div class="price">$19.99</div>
+
+
+  <div class="sizes">
+    <h3>Men's Sizes</h3>
+    <ul>
+      <% @shirt.shirt_sizes.where(:gender => 'M').where(:is_active => true).each do |shirt_size| %>
+        <li>
+          <a href="javascript:void(0)" data-shirt-size-id="<%= shirt_size.id %>" data-method="Post"><%= shirt_size.name %></a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="sizes">
+    <h3>Women's Sizes</h3>
+    <ul>
+      <% @shirt.shirt_sizes.where(:gender => 'W').where(:is_active => true).each do |shirt_size| %>
+        <li>
+          <a href="javascript:void(0)" data-shirt-size-id="<%= shirt_size.id %>" data-method="Post"><%= shirt_size.name %></a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="related-shirts">
+    <h2>Related Shirts</h2>
+    <ul>
+      <% 6.times do %>
+        <li><%= image_tag('shirt-gallery-placeholder.png') %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<h1>Cart</h1>
+<% if @current_order.order_items.length == 0 %>
+  No items have been added to your cart.
+<% else %>
+  <table>
+    <thead>
+			<tr>
+				<th></th>
+				<th>Shirt</th>
+			  <th>Size</th>
+				<th>Quantity</th>
+			  <th>Price</th>
+				<th></th>
+			</tr>
+    </thead>
+    <tbody>
+    <% @current_order.order_items.each do |item| %>
+      <tr>
+	      <td><%= image_tag item.shirt_size.shirt.photo.url(:thumb) %></td>
+	      <td><%= item.shirt_size.shirt.name %></td>
+        <td><%= item.shirt_size.name %></td>
+	      <td><%= item.quantity %></td>
+	      <td><%= number_to_currency(item.price) %></td>
+	      <td><%= link_to 'Delete', cart_url(:id => item.id), :method => :delete%></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+	<button type="button" href="/checkout">Check Out</button>
+<% end %>

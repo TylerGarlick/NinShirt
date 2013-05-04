@@ -1,0 +1,47 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  order_status_id: 1
+  billing_first_name: MyString
+  billing_last_name: MyString
+  billing_address: MyString
+  billing_address2: MyString
+  billing_city: MyString
+  billing_state: MyString
+  billing_zip: MyString
+  shipping_first_name: MyString
+  shipping_last_name: MyString
+  shipping_address: MyString
+  shipping_address2: MyString
+  shipping_city: MyString
+  shipping_state: MyString
+  shipping_zip: MyString
+  transaction_id: MyString
+  shipping_tracking_number: MyString
+  subtotal: 1.5
+  shipping: 1.5
+  total: 1.5
+
+two:
+  user_id: 1
+  order_status_id: 1
+  billing_first_name: MyString
+  billing_last_name: MyString
+  billing_address: MyString
+  billing_address2: MyString
+  billing_city: MyString
+  billing_state: MyString
+  billing_zip: MyString
+  shipping_first_name: MyString
+  shipping_last_name: MyString
+  shipping_address: MyString
+  shipping_address2: MyString
+  shipping_city: MyString
+  shipping_state: MyString
+  shipping_zip: MyString
+  transaction_id: MyString
+  shipping_tracking_number: MyString
+  subtotal: 1.5
+  shipping: 1.5
+  total: 1.5

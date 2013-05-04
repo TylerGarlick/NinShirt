@@ -1,0 +1,2 @@
+module Admin::ShirtSizesHelper
+end

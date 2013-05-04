@@ -1,0 +1,45 @@
+<%= form_for current_order, :url => {:controller =>  :carts, :action => :update}  do  %>
+	<table class="cart">
+		<tr>
+			<th class="product-name">Name</th>
+			<th class="price">Price</th>
+		  <th class="operator"></th>
+			<th class="quantity">Quantity</th>
+		  <th class="operator"></th>
+			<th>Line Total</th>
+			<th></th>
+		</tr>
+		<% order.order_items.each do |item| %>
+			<tr>
+				<td>
+				    <%= item.shirt_size.shirt.name %><br />
+						<%= item.shirt_size.gender %> <%= item.shirt_size.size %>
+				</td>
+				<td><%= number_to_currency item.shirt_size.shirt.price %></td>
+			  <td>x</td>
+				<td>
+				  <%= text_field_tag :quantity, item.quantity, :name => 'quantity[]'  %>
+					<%= hidden_field_tag :ids, item.id, :name => 'ids[]' %>
+				</td>
+			  <td>=</td>
+				<td><%= number_to_currency (item.quantity * item.price) %></td>
+				<td></td>
+			</tr>
+		<% end %>
+		<tr>
+			<th colspan="5" class="footer-label">Sub Total:</th>
+			<th colspan="2"><%= number_to_currency order.subtotal %></th>
+		</tr>
+	</table>
+	<div class="cart-update-button"><button type="submit" class="prosto_button button">Update Cart</button></div>
+	<div class="cart-checkout-button"><button type="button" href="<%= check_out_index_url %>" class="prosto_button button">Check Out</button></div>
+<% end %>
+
+
+<% content_for :head do %>
+	<title>NinShirt, Your Cart</title>
+<% end %>
+
+<% content_for :page_title do %>
+	<h1>Cart</h1>
+<% end %>

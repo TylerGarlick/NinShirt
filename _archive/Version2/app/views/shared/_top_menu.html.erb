@@ -1,0 +1,23 @@
+<ul class="sf-menu">
+	<li><%= link_to 'Home', root_url %></li>
+	<li><%= link_to 'Shirts', shirts_url %>
+		<ul class='children'>
+			<li><%= link_to "All Shirts", shirts_url %></li>
+			<li><%= link_to "Mens's Shirts", mens_shirts_url %></li>
+			<li><%= link_to "Womens's Shirts", womens_shirts_url %></li>
+			<li><%= link_to "Shirts By Artist", shirts_url %></li>
+		</ul>
+	</li>
+  <li><%= link_to 'Contact Us', root_url %></li>
+	<li><a href="#">My Account</a>
+		<ul class='children'>
+			<% if logged_in? %>
+				<li><%= link_to 'Profile', user_url(current_user) %></li>
+				<li><%= link_to 'Log Out', logout_url %></li>
+			<% else %>
+				<li><%= link_to 'Login', login_url %></li>
+				<li><%= link_to 'Register for Free', new_user_url %></li>
+			<% end %>
+		</ul>
+	</li>
+</ul>

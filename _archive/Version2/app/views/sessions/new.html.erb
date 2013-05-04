@@ -1,0 +1,21 @@
+<p>Don't have an account? <%= link_to "Sign up!", signup_path %></p>
+
+<%= form_tag sessions_path do %>
+  <div class="fields">
+    <%= label_tag :login, "Username or Email Address" %>
+    <%= text_field_tag :login, params[:login], :title => "Enter your username or email address.  If you've forgotten your username or password please use the link below." %>
+  </div>
+  <div class="fields">
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+  </div>
+  <div class="buttons"><%= submit_tag "Log in" %> <input type="button" href="<%= root_url %>" value="Forgot Password"/></div>
+<% end %>
+
+<% content_for :page_title do %>
+	<h1>Login</h1>
+<% end %>
+
+<% content_for :head do %>
+	<title>NinShirt, Login or register for a free account.  </title>
+<% end %>

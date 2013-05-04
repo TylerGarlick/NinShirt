@@ -1,0 +1,31 @@
+<%= form_for [:admin, shirt] do |f| %>
+	<%= f.error_messages %>
+	<div class="fields">
+		<%= f.label :user_id, 'Artist' %>
+		<%= f.collection_select :user_id, User.all, :id, :username %>
+	</div>
+
+  <div class="fields">
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</div>
+
+	<div class="fields">
+		<%= f.label :description %>
+		<%= f.text_area :description %>
+	</div>
+
+	<div class="fields">
+		<%= f.label :price %>
+		<%= f.text_field :price %>
+	</div>
+
+	<div class="fields">
+		<%= f.label :whole_sale_price %>
+		<%= f.text_field :whole_sale_price %>
+	</div>
+
+	<div class="buttons">
+		<%= f.submit (shirt.new_record? ? "Create" : "Update") %>
+	</div>
+<% end %>

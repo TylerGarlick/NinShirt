@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  shirt_size_id: 1
+  quantity: 1
+  price: 1.5
+
+two:
+  shirt_size_id: 1
+  quantity: 1
+  price: 1.5

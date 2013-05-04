@@ -1,0 +1,15 @@
+<h1>Recent Orders</h1>
+<table>
+  <thead>
+  <tr>
+    <th>Order Number</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @orders.each do |order| %>
+    <tr>
+      <td><%= order.id %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

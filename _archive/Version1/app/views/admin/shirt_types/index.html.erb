@@ -1,0 +1,23 @@
+<h1>Shirt Types</h1>
+
+<%= link_to 'New', new_admin_shirt_type_path %>
+<table>
+	<thead>
+		<tr>
+			<th></th>
+			<th>Name</th>
+			<th>Gender</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @shirt_types.each do |shirt_type| %>
+		<tr>
+			<td><%= link_to 'Edit', edit_admin_shirt_type_path(shirt_type) %></td>
+			<td><%= shirt_type.name %></td>
+			<td><%= shirt_type.gender %></td>
+			<td><%= link_to 'Delete', admin_shirt_type_path(shirt_type), :method => 'Delete', :confirm => 'Are you sure you want to delete this shirt type?' %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>

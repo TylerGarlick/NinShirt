@@ -1,0 +1,72 @@
+<%= form_for [:admin, @shirt], :html => { :multipart => true } do |f| %>
+	<%= f.error_messages %>
+	<div class="fields">
+		<%= f.label :shop_id %>
+		<%= f.collection_select(:shop_id, Shop.all, :id,:name, :include_blank => true) %>
+	</div>
+
+	<div class="fields">
+		<%= f.label :mens_shirt_type_id %>
+		<%= f.collection_select(:mens_shirt_type_id, ShirtType.where(:gender => 'M'), :id,:name, :include_blank => true) %>
+	</div>
+
+	<div class="fields">
+		<%= f.label :womens_shirt_type_id %>
+		<%= f.collection_select(:womens_shirt_type_id, ShirtType.where(:gender => 'W'), :id,:name, :include_blank => true) %>
+	</div>
+
+  <div class="fields">
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</div>
+
+	<div class="fields">
+		<%= f.label :description %>
+		<%= f.text_area :description %>
+	</div>
+
+	<div class="fields">
+		<%= f.label :price %>
+		<%= f.text_field :price %>
+	</div>
+
+	<div class="fields">
+		<%= f.label :wholesale_price %>
+		<%= f.text_field :wholesale_price %>
+	</div>
+
+  <div class="fields">
+	  <% if @shirt.splashscreen.nil? %>
+		  <div>
+			  <%= image_tag @shirt.splashscreen.url %>
+		  </div>
+		<% end %>
+	  <%= f.label :splashscreen %>
+	  <%= f.file_field :splashscreen %>
+  </div>
+
+	<div class="fields">
+	  <% if @shirt.photo.nil? %>
+		  <div>
+			  <%= image_tag @shirt.photo.url %>
+		  </div>
+		<% end %>
+	  <%= f.label :photo %>
+	  <%= f.file_field :photo %>
+  </div>
+
+  <div class="fields">
+	  <%= f.label :is_active %>
+	  <%= f.check_box :is_active %>
+  </div>
+
+	<div class="fields">
+	  <%= f.label :is_approved %>
+	  <%= f.check_box :is_approved %>
+  </div>
+
+	<div class="buttons">
+		<%= f.submit (@shirt.new_record? ? "Create" : "Update") %> <button type="button" href="<%= admin_shirts_url %>">Cancel</button>
+	</div>
+
+<% end %>

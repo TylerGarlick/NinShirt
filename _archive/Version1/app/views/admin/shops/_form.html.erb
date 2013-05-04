@@ -1,0 +1,33 @@
+<%= form_for [:admin, @shop], :html => { :multipart => true } do |f| %>
+	<%= f.error_messages %>
+	<div class="fields">
+		<%= f.label :user_id %>
+		<%= f.collection_select(:user_id, User.all, :id,:username, :include_blank => true) %>
+	</div>
+  
+  <div class="fields">
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</div>
+
+  <div class="fields">
+	  <% if @shop.logo.nil? %>
+		  <div>
+			  <%= image_tag @shop.logo.url(:small) %>
+		  </div>
+		<% end %>
+	  <%= f.label :logo, 'Logo' %>
+	  <%= f.file_field :logo %>
+  </div>
+
+  <div class="fields">
+	  <%= f.label :is_active %>
+	  <%= f.check_box :is_active %>
+  </div>
+
+
+	<div class="buttons">
+		<%= f.submit (@shop.new_record? ? "Create" : "Update") %> <button type="button" href="<%= admin_shops_url %>">Cancel</button>
+	</div>
+
+<% end %>

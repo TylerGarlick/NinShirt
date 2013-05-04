@@ -1,0 +1,103 @@
+<div class="col1">
+	<table class="cart">
+		<th class="product-name">Name</th>
+		<th class="price">Price</th>
+		<th class="operator"></th>
+		<th class="quantity">Quantity</th>
+		<th class="operator"></th>
+		<th>Line Total</th>
+		<% order.order_items.each do |item| %>
+			<tr>
+				<td>
+					<%= item.shirt_size.shirt.name %><br />
+					<%= item.shirt_size.gender %> <%= item.shirt_size.size %>
+			</td>
+			<td><%= number_to_currency item.shirt_size.shirt.price %></td>
+			<td>x</td>
+			<td>
+				<%= item.quantity %>
+			</td>
+			<td>=</td>
+			<td><%= number_to_currency (item.quantity * item.price) %></td>
+			</tr>
+		<% end %>
+		<tr>
+			<th colspan="5" class="footer-label">Sub Total:</th>
+			<th><%= number_to_currency order.subtotal %></th>
+		</tr>
+		<tr>
+			<th colspan="5" class="footer-label">Tax:</th>
+			<th><%= number_to_currency order.tax %></th>
+		</tr>
+		<tr>
+			<th colspan="5" class="footer-label">Shipping:</th>
+			<th><%= number_to_currency order.shipping %></th>
+		</tr>
+		<tr>
+			<th colspan="5" class="footer-label">Total:</th>
+			<th><%= number_to_currency order.total %></th>
+		</tr>
+	</table>
+</div>
+
+<div class="col2">
+		<h4>Billing Information</h4>
+		<div class="fields">
+			<%= order.billing_first_name %> <%= order.billing_last_name %>
+		</div>
+		<div class="fields">
+			<%= order.billing_address %>
+			<% unless order.billing_address2.blank? %>
+		    <br /><%= order.billing_address2 %>
+			<% end %>
+		</div>
+		<div class="fields">
+			<%= order.billing_city %>, <%= order.billing_state %> <%= order.billing_zip %>
+		</div>
+		<div class="fields">
+			<%= link_to 'Edit', check_out_index_url %>
+		</div>
+	</div>
+	<div class="col2">
+		<h4>Shipping Information</h4>
+		<div class="fields">
+			<%= order.shipping_first_name %> <%= order.shipping_last_name %>
+		</div>
+		<div class="fields">
+			<%= order.shipping_address %>
+			<% unless order.shipping_address2.blank? %>
+		    <br /><%= order.shipping_address2 %>
+			<% end %>
+		</div>
+		<div class="fields">
+			<%= order.shipping_city %>, <%= order.shipping_state %> <%= order.shipping_zip %>
+		</div>
+		<div class="fields">
+			<%= link_to 'Edit', check_out_index_url %>
+		</div>
+	</div>
+
+<%= form_for :credit_cards, :url => process_order_url, :html => {:method => 'Put'} do %>
+	<div class="col1">
+		<h4>Credit Card Information</h4>
+		<div class="fields">
+			<%= label_tag :credit_card_number, "Credit Card Number" %>
+			<%= text_field_tag :credit_card_number %>
+		</div>
+		<div class="fields">
+			<%= label_tag :expiration_date, "Expiration Date" %>
+			<%= select :credit_card, :credit_card_month, 1..12, {} %> / <%= select_year(Date.today, :start_year => Date.today.year, :end_year => Date.today.year + 10) %>
+		</div>
+		<div class="fields">
+			<%= label_tag :cvv_code, "Cvv Code" %>
+			<%= text_field_tag :cvv_code %>
+		</div>
+	</div>
+	<div class="buttons" style="text-align: right;">
+		<button type="submit" class="prosto_button button">Complete Order</button>
+	</div>
+<% end %>
+
+<% content_for :breadcrumbs do %>
+	<%= link_to 'Home', root_url %> <span>»</span> <%= link_to 'Billing and Shipping Information', check_out_index_url %> <span>»</span> Process Order
+<% end %>

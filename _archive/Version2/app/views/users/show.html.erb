@@ -1,0 +1,36 @@
+<h3><%= user.username %></h3>
+
+<h4>Recent Purchases</h4>
+
+<table>
+  <tr>
+    <th>Order Number</th>
+    <th>Status</th>
+    <th>Total</th>
+  </tr>
+	<% orders.each do |order| %>
+    <tr>
+      <td><%= link_to order.id, order_url(order) %></td>
+      <td><%= order.order_status.name %></td>
+      <td><%= number_to_currency(order.total) %></td>
+    </tr>
+	<% end  %>
+</table>
+
+
+
+<% content_for :head do %>
+	<title>NinShirt > Profile for <%= current_user.username %></title>
+<% end %>
+
+<% content_for :page_title do %>
+	<h1>My Profile</h1>
+<% end %>
+
+<% content_for :breadcrumbs do %>
+	<%= link_to 'Home', root_url %> <span>»</span> Profile
+<% end %>
+
+<% content_for :left_menu do %>
+	<a href="#">Edit Profile</a>
+<% end %>

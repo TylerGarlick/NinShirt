@@ -1,0 +1,27 @@
+<%= form_for [:admin, shirt, shirt_size] do |f| %>
+	<%= f.error_messages %>
+
+	<div class="fields">
+		<%= f.label :size %>
+		<%= f.text_field :size %>
+	</div>
+
+	<div class="fields">
+		<%= f.label :size_code %>
+		<%= f.text_field :size_code %>
+	</div>
+
+	<div class="fields">
+		<%= f.label :gender %>
+		<%= f.select(:gender, %w[Mens Womens])%>
+	</div>
+
+	<div class="fields">
+		<%= f.label :is_active %>
+		<%= f.check_box :is_active %>
+	</div>
+
+	<div class="buttons">
+		<%= f.submit shirt_size.new_record? ? 'Create' : 'Update' %>
+	</div>
+<% end %>

@@ -1,0 +1,24 @@
+<h1>Shirts</h1>
+<%= link_to 'New', new_admin_shirt_url %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+	  <th>Wholesale Cost</th>
+    <th></th>
+  </tr>
+
+	<% shirts.each do |shirt| %>
+    <tr>
+      <td><%= shirt.name %></td>
+      <td><%= number_to_currency(shirt.price) %></td>
+	    <td><%= number_to_currency(shirt.whole_sale_price) %></td>
+	    <td>
+	        <%= link_to 'Edit', edit_admin_shirt_url(shirt) %> |
+		      <%= link_to 'Sizing', admin_shirt_shirt_sizes_url(shirt) %> |
+		      <%= link_to 'Photos', admin_shirt_shirt_photos_url(shirt) %>
+	    </td>
+    </tr>
+	<% end %>
+</table>

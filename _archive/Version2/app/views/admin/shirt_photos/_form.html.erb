@@ -1,0 +1,31 @@
+<%= form_for [:admin, shirt, shirt_photo], :html => {:multipart => true} do |f| %>
+
+	<div class="fields">
+		<%= f.label :photo_url, :photo %>
+		<%= image_tag(shirt_photo.photo_url) if shirt_photo.photo_url? %>
+    <%= f.file_field :photo_url %>
+    <%= f.hidden_field :photo_url_cache %>
+	</div>
+
+	<div class="fields">
+		<%= f.label :gender %>
+		<%= f.select(:gender, %w[Mens Womens])%>
+	</div>
+	<div class="fields">
+		<%= f.label :ordinal %>
+		<%= f.text_field :ordinal %>
+	</div>
+	<div class="fields">
+		<%= f.label :is_active %>
+		<%= f.check_box :is_active %>
+
+	</div>
+	<div class="fields">
+		<%= f.label :is_primary %>
+		<%= f.check_box :is_primary %>
+	</div>
+	<div class="buttons">
+		<%= f.submit shirt_photo.new_record? ? 'Create' : 'Update' %>
+	</div>
+	
+<% end %>

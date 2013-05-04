@@ -1,0 +1,21 @@
+<%= form_for [:admin, @shirt_type] do |f| %>
+	<div class="fields">
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</div>
+	<div class="fields">
+		<%= f.label :description %>
+		<%= f.text_area :description %>
+	</div>
+	<div class="fields">
+		<%= f.label :color %>
+		<%= f.text_field :color %>
+	</div>
+	<div class="fields">
+		<%= f.label :gender %>
+		<%= f.text_field :gender %>
+	</div>
+	<div class="buttons">
+		<%= f.submit @shirt_type.new_record? ? "Create" : "Update" %> <button type="button" href="<%= admin_shirt_types_url %>">Cancel</button>
+	</div>
+<% end %>

@@ -1,0 +1,21 @@
+<div class="shirts">
+	<% shirts.each do |shirt| %>
+		<%= render :partial => shirt %>
+	<% end %>
+</div>
+
+<% content_for :head do %>
+	<title>Shirts</title>
+<% end %>
+
+<% content_for :page_title do %>
+	<h1>Shirts</h1>
+<% end %>
+
+<% content_for :breadcrumbs do %>
+	<%= link_to 'Home', root_url %> <span>»</span> Shirts
+<% end %>
+
+<% content_for :left_menu do %>
+	<%= render :partial => 'shirts/browse_shirts' %>
+<% end %>

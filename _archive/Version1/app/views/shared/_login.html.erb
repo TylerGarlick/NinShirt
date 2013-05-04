@@ -1,0 +1,20 @@
+<div id="login" class="jqmWindow modal">
+	<div class="login-form">
+		<h2>Login</h2>
+		<%= form_tag sessions_path do %>
+			<div class="fields">
+				<%= label_tag :login, "Username or Email Address" %>
+				<%= text_field_tag :login, params[:login] %>
+			</div>
+			<div class="fields">
+				<%= label_tag :password %>
+				<%= password_field_tag :password %>
+			</div>
+			<div class="buttons"><button type="submit">Login</button> <button type="button" class="jqmClose">Cancel</button></div>
+		<% end %>
+	</div>
+	<div class="register-for-account">
+		<h2>Don't have an Account?</h2>
+		<div>Registering is easy.  Click here to find out more information!</div>
+	</div>
+</div>

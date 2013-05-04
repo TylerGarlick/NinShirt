@@ -1,0 +1,83 @@
+body { direction:rtl; unicode-bidi:embed; }
+/* Form styles */
+input { margin:0.1em 0em 0.3em 0.3em }
+select { padding: .1em 0.2em 0 0; }
+/* List styles */
+ul li { text-indent: -.85em; margin-right: .85em; }
+ul { margin-right: 1.5em; }
+ol { margin-right: 2.35em; }
+ol ol, ul ol { margin-right: 2.5em; }
+.hentry li {  background:url(../images/i_marker.png) no-repeat 100% 14px }
+.hentry .arrow li {  background:url(../images/arrow_rtl.png) no-repeat 100% 9px }
+/* Header styles */
+header nav ul.sf-menu { float:left }
+header nav li { float:right; }
+header nav li:before { content: ""; }
+header nav ul ul { margin:9px -26px 0 0; }
+header nav .sf-menu li { float:right; }
+header nav .sf-menu li:hover ul,header nav  .sf-menu li.sfHover ul { right:0; }
+header nav ul.sf-menu li li:hover ul,header nav  ul.sf-menu li li.sfHover ul { right:202px; }
+header nav ul.sf-menu li li li:hover ul,header nav  ul.sf-menu li li li.sfHover ul { right:202px; }
+.logo img { float:right; margin:0 10px 0 20px; }
+.logo span { float:right }
+/* Slider/Header title area */
+.page_title .descr { float:right;}
+.page_title .full { float:right;}
+.page_title .bold .slide_button { background:url(../images/bg_slide_button_rtl.png) no-repeat 0 0; padding:24px 20px 20px 80px; }
+#nav { float:left;  }
+#nav  a { float:right; text-decoration:none  }
+#coin-slider-slideshow #nav { margin-left:0; }
+/* Content styles */
+.bqf {  margin:0 -30px -10px 0;  }
+.bql {  margin:0 10px -20px 0;}
+/* Posts styles */
+.prev { padding:30px 0 0 20px; margin:-4px 0 0 40px;  float:right;background:url(../images/next.png) no-repeat; }
+.next { padding:30px 0 0 20px;  margin:-4px 40px 0 0; float:right;background:url(../images/prev.png) no-repeat; }
+.wp-pagenavi .current {  float:right }
+.wp-pagenavi .page {  float:right }
+#authorbox h3 {  padding:18px 10px 5px 17px; }
+#authorbox img {  float:right;  }
+img.small_thumb { float:right; margin-left:15px; }
+.commentlist>ul.children { margin:0 30px 0 0 !important; }
+.avatars { float:right;  }
+.comment-meta { margin:0 110px 0 0; padding:8px 0 3px 20px; }
+.comment-body p { padding:2px 120px 20px 20px; }
+.comment-reply-link { float:left;  }
+.comment-meta cite {  padding-left:5px;  }
+.pinglist {  margin-right:0; }
+.pinglist li { margin-right:0;  }
+.pinglist li img { margin:2px 0 0 10px; float:right }
+.pinglist li a { float:right }
+#respond #submit { float:left; }
+.thumbnail_list li {  padding:10px 0; margin:0;  background:none }
+/* Sidebar/Footer and widgets styles */
+#s {  float:right }
+.widget_categories a, .widget_archive a, .widget_pages a, .widget_nav_menu a { padding-right:22px }
+.widget_categories a, .widget_archive a { background:url(../images/i_marker.png) no-repeat 100% 4px }
+.widget_pages ul ul, .widget_nav_menu ul ul { margin-right:20px;  }
+.widget_pages a, .widget_nav_menu a { background:url(../images/arrow_rtl.png) no-repeat 100% 2px; }
+.widget_links li { padding-right:10px }
+.footer_widgets .col3 {  margin: 0 10px 0 34px }
+.footer_widgets .col2 { margin: 0 0 0 10px;  }
+.footer_widgets .col2 li, .connect li { float:right;  margin:0 0 0 10px;  }
+footer p { float:right; }
+footer nav { float:left;  }
+footer nav li { float:right;border-left:none }
+/* Portfolio styles */
+.portfolio_small_item .portfolio_thumb {  background:url(../images/bg_portfolio_small_thumb_rtl.png) no-repeat 100% 0;  float:right;  }
+.portfolio_small_item h2, .portfolio_medium_item h2, .portfolio_item h2 {  margin-right:4px; }
+.portfolio_small_item .portfolio_thumb .link { margin:-73px 215px 0 0;  }
+/* Contacts styles */
+#contactform #contactus {  float:right; border-left:1px solid #d6d6d6 !important; padding:11px 22px 12px 20px }
+#contactform .info strong {  margin:10px 100px 0 0; }
+#loader, #loaderWidget { float:right; margin-right:20px; }
+#contactformWidget #widgetcontactus {  float:right;  }
+/* Shortcodes styles */
+div.prosto_info { padding:15px 70px 15px 15px;background-position:100% 19px  }
+div.prosto_warning {  padding:15px 70px 15px 15px; background-position:100% 19px  }
+div.prosto_successful { padding:15px 70px 15px 15px; background-position:100% 19px  }
+div.prosto_error {  padding:15px 70px 15px 15px; background-position:100% 19px  }
+h4.tog {  padding:5px 30px 5px 5px;  background:url(../images/bg_tog_rtl1.png) no-repeat 100% 15px}
+h4.bounce {background:url(../images/bg_tog_rtl.png) no-repeat 100% 15px}
+.buy_now { left:0;  }
+.portfolio_page .content .col1 .breadcrumbs { margin-right:10px; }
